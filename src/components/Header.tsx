@@ -11,7 +11,7 @@ import {Logos} from '@/assets/assets'
 const Header:React.FC = () => {
      return (
           <header className='main-header'>
-               <ImageLink fileSrc={Logos.black} optClass='header-logo' title='raga logo image' />
+               <ImageLink fileSrc={RagaLogo} optClass='header-logo' title='raga logo image' />
                <nav className='nav-container'>
                     <i className='menu-dropper'><MdMenu /></i>
                     <div className="nav-links-container">
