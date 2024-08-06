@@ -9,7 +9,10 @@ import Image from "next/image";
 export const NavLink:React.FC<INavLink> = ({title,dest}) => {
      const pathname = usePathname();
      return (
-          <Link href={dest || "/"} className={pathname === dest ?"nav-link active-link":"nav-link"}>{title}</Link>
+          <div className="nav-link-container">
+               <Link href={dest || "/"} className={pathname === dest ?"nav-link active-link":"nav-link"}>{title}</Link>
+               <span className="nav-link-underline"></span>
+          </div>
      )
 }
 

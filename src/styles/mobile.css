@@ -3,7 +3,8 @@
           font-size: 16px;
      }
 
-     .main-container{
+     .main-header, .main-footer,
+     .main-page{
           width: 95%;
      }
 
@@ -13,5 +14,23 @@
 
      .menu-dropper{
           display: inline-block;
+     }
+
+     .why-card{
+          width: 45%;
+     }
+
+     .why-card p {
+          letter-spacing: 0.5px;
+          font-size: 0.75rem;
+          width: 95%;
+     }
+
+     .home-hero-section{
+          padding: 20px 10px;
+     }
+
+     .home-hero-section .content {
+          padding: 20px 20px;
      }
 }
