@@ -7,9 +7,29 @@ import MainBackground from "@/components/backgrounds/MainBackground";
 
 const inter = Inter({ subsets: ["latin"] });
 
+// export const metadata: Metadata = {
+//   title: "Raga Tech",
+//   description: "Raga Tech is one of the leading Tech Companies in providing the best services to people world wide.",
+// };
+
+
 export const metadata: Metadata = {
   title: "Raga Tech",
   description: "Raga Tech is one of the leading Tech Companies in providing the best services to people world wide.",
+  openGraph: {
+    title: "Horneka",
+    description: "Raga Tech is one of the leading Tech Companies in providing the best services to people world wide.",
+    url: "https://raga-tech-client.vercel.app/",
+    type: "website",
+    images: [
+      {
+        url: "/images/logo.png",
+        width: 150,
+        height: 150,
+        alt: "Raga Tech",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
