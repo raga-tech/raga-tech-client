@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/logo.png",
+        url: "/images/raga-logo.png",
         width: 150,
         height: 150,
         alt: "Raga Tech",
