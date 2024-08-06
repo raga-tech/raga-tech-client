@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "Raga Tech",
   description: "Raga Tech is one of the leading Tech Companies in providing the best services to people world wide.",
   openGraph: {
-    title: "Horneka",
+    title: "Raga Tech",
     description: "Raga Tech is one of the leading Tech Companies in providing the best services to people world wide.",
     url: "https://raga-tech-client.vercel.app/",
     type: "website",
