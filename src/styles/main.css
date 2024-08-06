@@ -239,9 +239,9 @@ body{
 }
 
 .home-hero-section .content h1{
-     color: var(--white);
-     font-size: 2.4rem;
-     font-weight: 600;
+     color: var(--gray);
+     font-size: 2rem;
+     font-weight: 700;
      margin-block: 10px;
      text-align: center;
 }
@@ -281,9 +281,9 @@ body{
 }
 
 .main-container .title h3 {
-     font-size: 1.6rem;
+     font-size: 1.4rem;
      font-weight: 700;
-     color: var(--white);
+     color: var(--gray);
      text-align: center;
 }
 
