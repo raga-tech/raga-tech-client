@@ -12,6 +12,10 @@ export const WhyImages = {
      collaboration: '/images/collaboration.png'
 } 
 
+export const AboutImages = {
+     image1: '/images/raga-about-tech.png'
+}
+
 export const Logos = {
      black: BlackLogo
 }

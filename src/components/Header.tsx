@@ -19,7 +19,7 @@ const Header:React.FC = () => {
                          <NavLink title='services' dest='/services' />
                          <NavLink title='works' dest='/works' />
                     </div>
-                    <ActionBtn title="Hire Us" dest="/contact" />
+                    <ActionBtn title="Contact Us" dest="/contact" />
                </nav>
           </header>
      )

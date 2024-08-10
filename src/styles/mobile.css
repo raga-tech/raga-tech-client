@@ -33,4 +33,22 @@
      .home-hero-section .content {
           padding: 20px 20px;
      }
+
+     .home-hero-section .content h1{
+          font-size: 1.6rem;
+     }
+     
+     .home-hero-section .content p {
+          font-size: 1rem;
+     }
+     .main-container .about-content{
+          flex-direction: column-reverse;
+          gap: 10px;
+          align-items: center;
+     }
+     .main-container .about-content .images,
+     .main-container .about-content .text  {
+          width: 90%;
+     }
+
 }
