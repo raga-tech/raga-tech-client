@@ -9,7 +9,7 @@ import MyImage from "./MyImage";
 
 const SupportContainer = () => {
      const appContext = useContext(AppContext);
-     if(!appContext) throw new Error("Invalid usage of app context");
+     if(!appContext) throw new Error("Invalid usage of app context in this component");
      const {data,setData} = appContext;
      const {supportOn} = data;
      const navigate = (urlStr:string) => {
