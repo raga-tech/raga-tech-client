@@ -29,6 +29,7 @@ body{
      max-width: 1440px;
      margin-inline: auto;
      background-color: var(--main-black);
+     padding: 10px 0;
 }
 
 /* backgrounds */
@@ -70,8 +71,8 @@ body{
 .main-header{
      width: 80%;
      position: sticky;
-     top: 10px;
-     border: 1.5px solid var(--gray);
+     top: 0px;
+     border: 1.5px solid var(--light-black);
      display: flex;
      flex-direction: row;
      align-items: center;
@@ -82,6 +83,8 @@ body{
      margin: 5px auto;
      z-index: 99;
      background-color: var(--main-black);
+     -webkit-backdrop-filter: blur(8px);
+     backdrop-filter: blur(8px);
 }
 
 .main-footer{
@@ -107,7 +110,11 @@ body{
      width: 100%;
      max-width: var(--max-width);
      margin-inline: auto;
-     margin-block: 10px;
+     margin-block: 30px;
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     position: relative;
 }
 /* buttons */
 .action-btn{
@@ -165,6 +172,11 @@ body{
      color: var(--main-blue);
      font-weight: 600;
 }
+
+.my-image-container {
+     background-position: center;
+     background-size: 100%;
+}
 /* end of Components */
 
 /* containers */
@@ -186,6 +198,120 @@ body{
      justify-content: space-evenly;
      gap: 8px;
 }
+
+.support-container {
+     width: auto;
+     position: fixed;
+     bottom: 50px;
+     right: 25px;
+     z-index: 10;
+     transition: all 0.5s ease;
+}
+
+.support-container .contact-icon {
+     width: 45px;
+     height: 45px;
+     background-color:var(--main-blue) ;
+     border-radius: 50%;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+     transition: all 0.4s ease;
+     cursor: pointer;
+}
+
+.support-container .contact-icon:hover {
+     background-color: var(--main-blue-light);
+}
+.support-container .contact-icon i{
+     font-size: 30px;
+     color: var(--white);
+}
+
+.support-container .contact-container {
+     width: 350px;
+     background-color: var(--white) ;
+     border-radius: 10px;
+     padding: 10px;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: center;
+     position: relative;
+     gap: 10px;
+}
+
+.support-container .contact-container .close-icon {
+     font-size: 25px;
+     font-weight: 600;
+     color: #00000050;
+     border: 1.5px solid #00000050;
+     width: 40px;
+     height: 40px;
+     text-align: center;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     border-radius: 50%;
+     cursor: pointer;
+     transition: all 0.4s ease;
+}
+
+.support-container .contact-container .close-icon:hover {
+     color: var(--main-blue);
+     border-color: var(--main-blue);
+}
+
+.support-container .contact-container .support-row {
+     width: 90%;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: flex-start;
+     gap: 10px;
+     padding: 5px 5px;
+     border: 1.5px solid #00000050;
+     border-radius: 35px;
+     transition: all 0.5s ease;
+     cursor: pointer;
+     text-decoration: none;
+}
+
+.support-container .contact-container .support-row:hover {
+     border-color: var(--main-blue);
+}
+
+.support-container .contact-container .support-row .my-image-container {
+     border-radius: 50%;
+     position: relative;
+     transition: all 0.5s ease;
+     transform-origin: right;
+}
+
+.support-container .contact-container .support-row .my-image-container:hover {
+     transform: scale(2);
+}
+
+.support-container .contact-container .support-row .my-image-container::after {
+     content: "";
+     width: 10px;
+     height: 10px;
+     border-radius: 50%;
+     background-color: #1da81d;
+     position: absolute;
+     bottom: 0;
+     right: 0;
+     border: 1px solid #000;
+}
+
+.support-container .contact-container .support-row p {
+     font-size: 1rem;
+     font-weight: 500;
+     color: var(--main-blue);
+}
+
 /* end of containers */
 
 /* icons */
@@ -223,9 +349,23 @@ body{
      background-repeat: no-repeat;
      background-size: 100%;
      padding: 100px;
-     background: linear-gradient(90deg, var(--light-black),  var(--main-black) 50%);
+     /* background: linear-gradient(90deg, var(--light-black),  var(--main-black) 50%); */
+     /* background-color: var(--main-black); */
      border-radius: 10px;
      border: 1px solid var(--light-black);
+     position: relative;
+     background-size: cover;
+     background-position: center;
+}
+
+.section-background-cover {
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     top: 0;
+     background-color: #00000080;
+     left: 0;
+     z-index: 0;
 }
 
 .home-hero-section .content{
@@ -233,12 +373,15 @@ body{
      border-radius: 10px;
      padding: 25px 50px;
      /* background-color: #222c2e75; */
-     background: linear-gradient(60deg, var(--main-black), var(--light-black));
+     /* background: linear-gradient(60deg, var(--main-black), var(--light-black)); */
+     background-color: #222c2e90;
      margin-inline:auto;
+     position: relative;
+     z-index: 1;
 }
 
 .home-hero-section .content h1{
-     color: var(--gray);
+     color: var(--white);
      font-size: 2rem;
      font-weight: 700;
      margin-block: 10px;
@@ -248,7 +391,7 @@ body{
 .home-hero-section .content p{
      font-size: 1.4rem;
      font-weight: 600;
-     color: var(--main-blue);
+     color: var(--gray);
      text-align: center;
 }
 .section-background{
@@ -275,7 +418,9 @@ body{
 
 .main-container .title{
      width: 100%;
-     padding: 10px;
+     padding: 5px 10px;
+     position: relative;
+     z-index: 1;
 
 }
 
@@ -283,7 +428,7 @@ body{
      font-size: 1.4rem;
      font-weight: 700;
      color: var(--gray);
-     text-align: center;
+     text-align: left;
 }
 
 .main-container  .card-content {
@@ -316,6 +461,8 @@ body{
 .main-container .about-content .text p{
      font-size: 0.9rem;
      color: var(--gray);
+     font-weight: 300;
+     letter-spacing: 0.56px;
 }
 
 .main-container .about-content .images {
@@ -332,7 +479,8 @@ body{
 
 .why-card{
      width: 23%;
-     box-shadow: 1px 1px 4px var(--light-black);
+     aspect-ratio: 100/80;
+     box-shadow: 1px 1px 10px #ffffff40;
      border-radius: 10px;
      display: flex;
      flex-direction: column;
@@ -352,7 +500,8 @@ body{
      color: var(--gray);
      text-align: center;
      width: 80%;
-     font-weight: 400;
+     font-weight: 300;
+     letter-spacing: 0.56px;
 }
 
 .why-card img {
@@ -361,5 +510,66 @@ body{
      padding: 7.5px;
 }
 
+.home-services-section{
+     border-radius: var(--round-10);
+     overflow: hidden;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+     padding: 20px;
+}
+
+
+.home-services-section .title h3{
+     text-shadow: 0.4px 1px 2px var(--main-black);
+     color: #fff;
+}
+
+.home-services-section .content{
+     width: 95%;
+     margin: 0 auto;
+     display: flex;
+     flex-direction:row ;
+     flex-wrap: wrap;
+     gap: 10px;
+     justify-content: space-between;
+     position: relative;
+     z-index: 1;
+}
+
+.service-card {
+     width: 30%;
+     display: flex;
+     flex-direction: column;
+     border-radius: var(--round-10);
+     align-items: center;
+     padding: 10px;
+     gap: 5px;
+     background-color: #00000090;
+     aspect-ratio: 100/60;
+
+}
+
+.service-card .my-image-container {
+     width: 90%;
+     height: auto;
+     aspect-ratio: 100/50;
+     border-radius: var(--round-5);
+}
+
+.service-card h4 {
+     font-size: 0.9rem;
+     font-weight: 600;
+     color: var(--white);
+     width: 100%;
+     
+}
+
+.service-card p {
+     font-size: 0.75rem;
+     color: var(--gray);
+     letter-spacing: 0.56px;
+     font-weight: 300;
+}
 
 /* end of page sections styles */

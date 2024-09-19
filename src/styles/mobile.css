@@ -1,4 +1,4 @@
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 600px) {
      :root {
           font-size: 16px;
      }
@@ -51,4 +51,7 @@
           width: 90%;
      }
 
+     .service-card{
+          width: 100%;
+     }
 }

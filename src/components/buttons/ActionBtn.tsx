@@ -4,15 +4,17 @@ import { IButton } from '@/interfaces/IButton'
 import { useRouter } from 'next/navigation';
 import React, { MouseEventHandler } from 'react'
 
-const ActionBtn: React.FC<IButton> = ({title, dest}) => {
+const ActionBtn: React.FC<IButton> = ({title, dest, action}) => {
      const router = useRouter();
      const handleClick = () => {
           
 
           if(dest !== undefined){
                router.push(dest);
-          }else{
-               console.log("error: destination undefined");
+          }else {
+               if(action) {
+                    action();
+               }
           }
      }
      return (

@@ -45,6 +45,7 @@
 
      .home-hero-section {
           padding: 50px;
+          min-height: 400px;
      }
      .home-hero-section .content {
           width: 90%;
@@ -52,5 +53,9 @@
 
      .why-card{
           width: 40%;
+     }
+
+     .service-card{
+          width: 45%;
      }
 } 
