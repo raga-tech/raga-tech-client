@@ -12,8 +12,8 @@ const SupportContainer = () => {
      if(!appContext) throw new Error("Invalid usage of app context");
      const {data,setData} = appContext;
      const {supportOn} = data;
-     const navigate = (url:string) => {
-          window.location.href = url
+     const navigate = (urlStr:string) => {
+          window.location.href = urlStr
      }
      return (
           <div className="support-container">
